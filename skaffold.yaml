@@ -1,0 +1,23 @@
+apiVersion: skaffold/v1beta7
+kind: Config
+build:
+  tagPolicy:
+    sha256: {}
+  artifacts:
+    - image: api-gateway
+      context: services/api-gateway
+    - image: authentication
+      context: services/authentication
+deploy:
+  kubectl:
+    manifests:
+      - ./services/**/manifests/*.yaml
+# profiles:
+#   - name: production
+#     build:
+#       googleCloudBuild:
+#         projectId: PROJECT_ID
+#     deploy:
+#       kubectl:
+#         manifests:
+#           - ./services/**/manifests/*.yaml

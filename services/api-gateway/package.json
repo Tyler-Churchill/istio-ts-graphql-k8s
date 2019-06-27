@@ -1,0 +1,29 @@
+{
+  "name": "api-gateway",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "nodemon --exec ts-node src/index.ts --inspect=0.0.0.0",
+    "start:production": "node dist/src/index.js"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.2.0",
+    "@types/isomorphic-fetch": "^0.0.35",
+    "@types/node": "^11.13.7",
+    "nodemon": "^1.18.11"
+  },
+  "dependencies": {
+    "@google-cloud/pubsub": "^0.28.1",
+    "apollo-link-http": "^1.5.14",
+    "apollo-server": "^2.4.8",
+    "graphql": "^14.2.1",
+    "graphql-query-complexity": "^0.2.3",
+    "graphql-tools": "^4.0.4",
+    "isomorphic-fetch": "^2.2.1",
+    "moment": "^2.24.0",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^8.1.0",
+    "type-graphql": "^0.17.2",
+    "typescript": "^3.4.5"
+  }
+}

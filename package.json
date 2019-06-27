@@ -1,0 +1,15 @@
+{
+  "license": "UNLICENSED",
+  "scripts": {
+    "api-gateway-service": "yarn --cwd services/api-gateway start",
+    "authentication-service": "yarn --cwd services/authentication start",
+    "api-gateway-service-install-deps": "yarn --cwd services/api-gateway",
+    "authentication-service-install-deps": "yarn --cwd services/authentication",
+    "install-all": "concurrently 'npm:*-deps'",
+    "start": "yarn install-all&& concurrently 'npm:*-service' --kill-others"
+  },
+  "dependencies": {
+    "@apollo/gateway": "^0.6.1",
+    "concurrently": "^4.1.0"
+  }
+}
